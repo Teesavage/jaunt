@@ -1,33 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/* variables */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary: white;
+  --secondary: rgb(250, 9, 30);
+  --tertiary: rgb(2, 2, 2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* reset */
+body,p,a,li{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* base styles */
+body{
+  background:var(--tertiary);
+  font-size: 20px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* fonts */
+h1,h2,h3,h4 {
+  color: var(--secondary);
+  font-size: 2em;
+  font-weight: bold;
 }
+a, li,p {
+  color: var(--primary)
+}
+
+
+
+
+/* mobile(default) styles */
+
+
+
+/* media queries */
+
+/* small tab styles */
+@media screen and (min-width: 620px){
+    
+}
+
+/* large tab and mini laptops styles */
+@media screen and (min-width: 960px){
+    
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+    
+}
+
+
