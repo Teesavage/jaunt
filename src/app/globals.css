@@ -1,9 +1,20 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 /* variables */
 :root {
   --primary: white;
-  --secondary: rgb(250, 9, 30);
+  --secondary: rgb(250, 17, 36);
   --tertiary: rgb(2, 2, 2);
+}
+
+/*--ICONS--*/
+.search{
+  color: var(--primary);
+}
+
+.eventIcons{
+  color: var(--primary);
+  font-size: 3em;
 }
 
 /* reset */
@@ -18,10 +29,22 @@ body,p,a,li{
 body{
   background:var(--tertiary);
   font-size: 20px;
+  overflow-x: hidden;
+}
+button{
+  background-color: var(--secondary);
+  color: var(--primary);
+  margin: 5px;
+  border-radius: 15px;
+}
+button:hover{
+  background-color: var(--primary);
+  color: var(--secondary); 
 }
 
+
 /* fonts */
-h1,h2,h3 {
+h1,h2,h3,h4 {
   color: var(--secondary);
   font-weight: bold;
 }
@@ -33,6 +56,120 @@ a, li,p {
 
 
 /* mobile(default) styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+#banner button{
+  background: var(--tertiary);
+}
+
+#header{
+  /*make it sticky*/
+}
+
+.headerName{
+  color: var(--secondary);
+}
+.nav {
+  display: none;
+}
+
+.bannerImg {
+  width: 100%;
+  height: 500px;
+}
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.bannerText {
+  color: var(--primary);
+  font-size: 2em;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+#events{
+  padding: 10px;
+}
+.eventsCard {
+  border: 1px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px var(--secondary);
+  padding: 5px;
+  margin: 10px;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+.eventsCard:hover{
+  background: rgba(19, 19, 19, 0.74);
+}
+#searchBar{
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#searchBar button:hover{
+  background: var(--tertiary);
+}
+.title{
+  text-align: center;
+  font-size: 2em;
+}
+#featuredEvent{
+  padding: 1px;
+}
+.featuredImg{
+  width: 100%;
+  height:250px;
+  padding: 1px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+.featuredCard{
+  border: 1px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px var(--primary);
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: 90%;
+  text-align: center;
+  background: rgb(15, 15, 15);
+}
+.featuredCard p{
+  text-align: left;
+}
+.featuredCard h1{
+  font-size: 1.8em;
+  animation: blink 1.5s infinite;
+}
+.blogCard{
+  border: 1px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px var(--primary);
+  padding: 5px;
+  margin: 5px;
+  height: 300px;
+  width: 90%;
+}
+.blogCard h2{
+  background-color: var(--primary);
+  border-radius: 10px;
+  color: var(--tertiary);
+}
+.blogCard:hover{
+  background: rgba(19, 19, 19, 0.74);
+}
+
+
+
+
+
 
 
 

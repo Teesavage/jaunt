@@ -1,7 +1,7 @@
-import { Roboto } from "next/font/google";
+import { Signika } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
+const signika = Signika({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
   title: {
@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={signika.className}>{children}</body>
     </html>
   );
 }
