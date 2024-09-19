@@ -1,0 +1,69 @@
+1. TEMPLATE FOR BLOG POST
+
+import BannerComponent from "@/bannerComponent/page";
+
+export const metadata = {
+    title: "Name Represented | Jaunt",
+    description: "Description",
+  };
+export default function Blog1(){
+    
+    return(
+        <>
+        <BannerComponent 
+            Image = "/images/___.jpg" 
+            text = "" />
+
+        <h1 className="title">TITLE</h1>
+        <section id="about">
+        <br />
+        <div className="blogDetail"><p>Locate Your Next Fun stop! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Illo consequatur voluptatum blanditiis dicta maiores rerum? Accusantium earum sunt et
+            nulla mollitia amet consectetur optio id odit expedita, blanditiis minus a.</p><br />
+
+         <p className="grid">
+            <Link href="/blog/_______/ticket"><button>GET TICKET(S)</button></Link>
+            <button>CONTACT</button>
+         </p>
+         </div>
+         <br />
+        
+        
+        </>
+    )
+}
+
+2. TEMPLATE FOR TICKET PAGE
+
+import TicketComponent from "@/components/ticketComponent/page";
+import Link from "next/link";
+import Image from "next/image";
+
+export const metadata = {
+    title: "Ticket - ___ | Jaunt",
+    description: "Get tickets to ___, Lagos.",
+  };
+export default function Ticket(){
+    return(
+        <>
+            <TicketComponent
+            Image = "" 
+
+            eventTitle = ""
+
+            eventTime = ""
+
+            Location = ""
+            
+            eventDescription = ""
+
+            eventOrganizer = ""
+
+            eventTicketPrice = ""
+
+            ticketLink = "" />
+
+
+        </>
+    )
+}

@@ -1,17 +1,28 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 /* variables */
 :root {
   --primary: white;
-  --secondary: rgb(250, 17, 36);
+  --secondary: rgb(230, 28, 61);
   --tertiary: rgb(2, 2, 2);
 }
 
 /*--ICONS--*/
 .search{
   color: var(--primary);
+  padding: 5px;
 }
-
+.footerIcon{
+  color: var(--tertiary);
+  padding: 15px;
+}
+.footerIcon:hover{
+  background: var(--secondary);
+  border-radius: 50%;
+  padding: 8px;
+}
 .eventIcons{
   color: var(--primary);
   font-size: 3em;
@@ -29,7 +40,7 @@ body,p,a,li{
 body{
   background:var(--tertiary);
   font-size: 20px;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 button{
   background-color: var(--secondary);
@@ -38,8 +49,8 @@ button{
   border-radius: 15px;
 }
 button:hover{
-  background-color: var(--primary);
-  color: var(--secondary); 
+  background-color: var(--tertiary);
+  color: var(--primary); 
 }
 
 
@@ -48,33 +59,94 @@ h1,h2,h3,h4 {
   color: var(--secondary);
   font-weight: bold;
 }
-a, li,p {
+a, li,p, hr {
   color: var(--primary)
 }
-
-
 
 
 /* mobile(default) styles */
 .grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  margin: 0; 
+  padding: 0;
+}
+.grids {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0;
+  margin: 0; 
+  padding: 0;
+}
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0; 
   padding: 0;
 }
 #banner button{
   background: var(--tertiary);
 }
 
+
 #header{
-  /*make it sticky*/
+  background: var(--primary);
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+html:not([data-scroll="0"]) #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--tertiary); 
+  opacity: 0.9;
+  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
+  transition: 0.4s linear;
 }
 
 .headerName{
   color: var(--secondary);
 }
-.nav {
+@keyframes movein {
+  from {width: 10%;}
+  to {width: 100%;}
+}
+
+
+#navList {
+  background: var(--tertiary);
+  font-size: 1.5rem;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 1000px;
+  opacity: 0.9;
+  right: 0;
+  animation: movein 0.5s;
+}
+#navList2{
   display: none;
+}
+.navItem{
+  text-align: center;
+  padding: 10px;
+}
+.navItem:hover{
+  background-color: var(--secondary);
+}
+.navBtn{
+  background-color: var(--tertiary);
+  color: var(--primary);
+  border-radius: 10px;
+  width: 15%;
+  height: 40px;
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.navBtn:hover{
+  background: rgba(0, 0, 0, 0.829);
 }
 
 .bannerImg {
@@ -92,15 +164,20 @@ a, li,p {
   font-weight: bold;
   animation: blink 1s infinite;
 }
+.bannerText2{
+  display: none;
+}
 #events{
+  width: 100%;
   padding: 10px;
 }
+
 .eventsCard {
   border: 1px;
   border-radius: 12px;
   box-shadow: 5px 5px 5px var(--secondary);
-  padding: 5px;
-  margin: 10px;
+  padding: 10px;
+  margin: 5px auto;
   height: 150px;
   width: 150px;
   text-align: center;
@@ -119,10 +196,19 @@ a, li,p {
 .title{
   text-align: center;
   font-size: 2em;
+  color: var(--primary);
+  margin-top: 10px;
 }
 #featuredEvent{
-  padding: 1px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 25px 10px;
+  margin-left: 10px;
 }
+/* #featuredEvent::-webkit-scrollbar{
+  display: none;
+ }*/
 .featuredImg{
   width: 100%;
   height:250px;
@@ -135,25 +221,44 @@ a, li,p {
   border-radius: 12px;
   box-shadow: 5px 5px 5px var(--primary);
   padding: 10px;
-  margin: 10px;
+  margin: 15px;
   height: auto;
-  width: 90%;
+  width: 93%;
   text-align: center;
   background: rgb(15, 15, 15);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  scroll-snap-align: start;
+  justify-content: space-between;
 }
 .featuredCard p{
   text-align: left;
 }
+.featuredCard p span{
+  color: var(--secondary);
+  font-weight: bold;
+}
 .featuredCard h1{
   font-size: 1.8em;
-  animation: blink 1.5s infinite;
+  text-align: center;
+}
+.featuredCard button{
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+#blog {
+  padding: 10px;
 }
 .blogCard{
   border: 1px;
   border-radius: 12px;
   box-shadow: 5px 5px 5px var(--primary);
   padding: 5px;
-  margin: 5px;
+  margin: 5px auto;
   height: 300px;
   width: 90%;
 }
@@ -161,13 +266,97 @@ a, li,p {
   background-color: var(--primary);
   border-radius: 10px;
   color: var(--tertiary);
+  font-size: 1em;
 }
 .blogCard:hover{
   background: rgba(19, 19, 19, 0.74);
 }
+#about{
+  padding: 5px;
+  margin: 5px;
+}
+#contact{
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+.form{
+  padding: 5px;
+  margin: 5px;
+  width: 90%; 
+  border-radius: 10px;
+}
+.blogDetail{
+  background: rgb(20, 19, 19);
+  padding: 5px;
+}
+.blogDetail span{
+  float: right;
+}
+
+#ticket{
+  padding: 10px;
+}
+.ticket h1{
+  font-size: 2em;
+  color: var(--primary);
+  text-align: center;
+}
+.ticket h2{
+  font-size: 1.5em;
+}
+.ticket p{
+  font-size: 1.3em;
+}
+#order{
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  background: rgb(20, 19, 19);
+  margin: 1px;
+  text-align: center;
+  position: sticky;
+  bottom: 20px;
+  z-index: 1;
+}
+.orderConfirmation{
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 10px;
+}
+.orderConfirmation h3 span{
+  float: right;
+  font-size: 1.5em;
+}
+.orderConfirmation b{
+  cursor: pointer;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+  background: var(--primary);
+  padding: 10px;
+}
 
 
 
@@ -177,17 +366,173 @@ a, li,p {
 
 /* small tab styles */
 @media screen and (min-width: 620px){
-    
+  .bannerText{
+    font-size: 2.5em;
+} 
+.bannerText2{
+  display: none;
+}
+.featuredCard{
+  height: auto;
+  flex: 0 0 50%;
+  width: 70%;
+  margin: auto;
+}
+.blogGrid h2{
+  font-size: 1.5em;
+}
+
+
+
+
 }
 
 /* large tab and mini laptops styles */
 @media screen and (min-width: 960px){
-    
+body{
+  overflow-x: hidden;
 }
+p {
+  font-size: 1.2em;
+}
+.bannerText{
+  font-size: 3em;
+  margin-bottom: 0;
+}
+.bannerText2{
+  display: none;
+  color: var(--primary);
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.navBtn {
+  display: none;
+}
+.logo{
+  position: absolute;
+  z-index: 1;
+}
+.navList{
+  display: none;
+}
+#navList2 {
+  background: var(--primary);
+  display: flex;
+  height: 50px;
+  align-items: right;
+  justify-content: right;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.navItem2{
+  color: var(--tertiary);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+}
+.navItem2:hover{
+  background: var(--secondary);
+  height: 51px;
+}
+.eventsCard{
+  width: 400px;
+}
+.featuredCard{
+  height: auto;
+  flex: 0 0 45%;
+  width: 50%;
+  margin: auto;
+}
+.blogGrid h2{
+  font-size: 1.5em;
+}
+.blogCard p{
+  font-size: 1.2em;
+}
+.blogDetail{
+  width: 80%;
+  margin: auto;
+}
+.blogDetail button{
+  width: fit-content;
+  
+}
+.blogimg{
+  width: 70%;
+}
+
+.orderConfirmation{
+  width: 70%;
+  margin: auto;
+}
+#order{
+  width: 60%;
+  margin: auto;
+}
+
+
+
+
+}
+
+
 
 /* desktop styles */
 @media screen and (min-width: 1200px){
-    
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 0; 
+    padding: 0;
+  }
+  .navList{
+    display: none;
+  }
+  .bannerImg{
+    margin-top: 0px;
+  }
+  .eventsCard {
+    border: 1px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px var(--secondary);
+    padding: 10px;
+    margin: auto;
+    height: 150px;
+    width: 90%;
+    text-align: center;
+  }
+  .featuredCard{
+    height: auto;
+    flex: 0 0 30%;
+    width: 50%;
+    margin: auto;
+  }
+  .blogGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0; 
+    padding: 0;
+  }
+  .blogGrid h2{
+    font-size: 1.5em;
+  }
+
+  #contact{
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+  }
+  .form{
+    padding: 5px;
+    margin: 5px;
+    width: 60%; 
+    border-radius: 10px;
+  }
+
 }
 
 
