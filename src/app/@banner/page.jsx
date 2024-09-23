@@ -24,7 +24,7 @@ export default function Banner() {
             </div>
             <div style={bannerText}>
             <div className="bannerText">FIND YOUR NEXT FUN STOP!</div>
-            <div className="bannerText2"><br />YOU REALLY REALLY NEED TO GO OUT AND CHILL. <br />WE'VE COMPILED THE PERFECT LOCATIONS FOR YOU!<br /></div>
+            <div className="bannerText2"><br />YOU REALLY REALLY NEED TO GO OUT AND CHILL. <br />WE&apos;VE COMPILED THE PERFECT LOCATIONS FOR YOU!<br /></div>
                 <Link href="#events"><button>&gt;&gt;&gt;</button></Link>
             </div>
       </section>

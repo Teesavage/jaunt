@@ -4,7 +4,7 @@ export default function HomeAbout() {
     return(
         <>
     <section id="about">
-      <h1 className="title">WHAT'S JAUNT ALL ABOUT??</h1>
+      <h1 className="title">WHAT&apos;S JAUNT ALL ABOUT??</h1>
       <p>Locate Your Next Fun stop! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
          Illo consequatur voluptatum blanditiis dicta maiores rerum? Accusantium earum sunt et
          nulla mollitia amet consectetur optio id odit expedita, blanditiis minus a.</p><br />
