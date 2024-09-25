@@ -52,6 +52,9 @@ button:hover{
   background-color: var(--tertiary);
   color: var(--primary); 
 }
+input, textarea{
+  color: var(--secondary);
+}
 
 
 /* fonts */

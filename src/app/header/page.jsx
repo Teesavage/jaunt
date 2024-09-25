@@ -9,7 +9,7 @@ export default function Header(){
     const removeSidebar = () => document.getElementById("navList").style.display = "none";
 
     useEffect(() => {
-        !isOpen? document.getElementById("navList").style.display = "none" : document.getElementById("navList").style.display = "block";
+        !isOpen? document.getElementById("navList").style.display = "block" : document.getElementById("navList").style.display = "none";
     }, [toggleSideBar, isOpen])
 
     
@@ -49,7 +49,7 @@ export default function Header(){
 
     return(
         <>
-    <div id="header" onClick={removeSidebar}>
+    <div id="header" onClick={removeSidebar} onLoad={removeSidebar}>
         <Image src="/images/jaunt-test-logo.png" alt="Logo" className="logo" width="50" height="50" />
             {/*<h1 className="headerName">JAUNT</h1>*/}
         

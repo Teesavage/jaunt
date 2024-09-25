@@ -11,7 +11,7 @@ export default function Featured(){
         showThumbs={false} 
         showStatus={true}
         showIndicators={false}
-        useKeyboardArrows={true}
+        useKeyboardArrows={false}
         autoPlay={true}
         infiniteLoop={true}
         >

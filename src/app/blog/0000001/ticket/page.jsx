@@ -21,7 +21,7 @@ export default function Ticket(){
 
             eventOrganizer = "MARYLAND FOODS AND SERVICES, LAGOS STATE ASSOCIATION OF RESTAURANTS."
 
-            eventTicketPrice = "15,000 NGN"
+            eventTicketPrice = "FROM 15,000 NGN"
 
             ticketLink = "/blog/0000001/ticket/ticketcheckout" />
 
