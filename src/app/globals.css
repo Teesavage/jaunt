@@ -226,7 +226,7 @@ html:not([data-scroll="0"]) #header {
   box-shadow: 5px 5px 5px var(--primary);
   padding: 10px;
   margin: 15px;
-  height: auto;
+  height: fit-content;
   width: 93%;
   text-align: center;
   background: rgb(15, 15, 15);
@@ -263,7 +263,7 @@ html:not([data-scroll="0"]) #header {
   box-shadow: 5px 5px 5px var(--primary);
   padding: 5px;
   margin: 10px auto;
-  height: 250px;
+  height: 260px;
   width: 90%;
 }
 .blogCard h2{
@@ -377,7 +377,7 @@ html:not([data-scroll="0"]) #header {
   display: none;
 }
 .featuredCard{
-  height: auto;
+  height: fit-content;
   flex: 0 0 50%;
   width: 70%;
   margin: auto;
@@ -445,7 +445,7 @@ p {
   width: 400px;
 }
 .featuredCard{
-  height: auto;
+  height: fit-content;
   flex: 0 0 45%;
   width: 50%;
   margin: auto;
@@ -512,7 +512,7 @@ p {
     text-align: center;
   }
   .featuredCard{
-    height: auto;
+    height: fit-content;
     flex: 0 0 30%;
     width: 50%;
     margin: auto;
