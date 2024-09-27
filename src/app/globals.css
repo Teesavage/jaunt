@@ -249,8 +249,8 @@ html:not([data-scroll="0"]) #header {
   text-align: center;
 }
 .featuredCard button{
-  margin-top: 20px;
-  text-align: center;
+  margin: 5px;
+  
 }
 
 
@@ -262,8 +262,8 @@ html:not([data-scroll="0"]) #header {
   border-radius: 12px;
   box-shadow: 5px 5px 5px var(--primary);
   padding: 5px;
-  margin: 5px auto;
-  height: 300px;
+  margin: 10px auto;
+  height: 250px;
   width: 90%;
 }
 .blogCard h2{
@@ -449,6 +449,9 @@ p {
   flex: 0 0 45%;
   width: 50%;
   margin: auto;
+}
+.featuredCard p{
+  padding: 5px;
 }
 .blogGrid h2{
   font-size: 1.5em;
