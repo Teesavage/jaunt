@@ -129,6 +129,9 @@ html:not([data-scroll="0"]) #header {
   animation: movein 0.5s;
   display: none;
 }
+#navList{
+  display: none;
+}
 #navList2{
   display: none;
 }
