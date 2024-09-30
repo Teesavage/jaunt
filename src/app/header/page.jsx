@@ -6,11 +6,10 @@ import { useState, useEffect } from "react";
 export default function Header(){
     const [isOpen, setIsOpen] = useState(false);
     const toggleSideBar = () => setIsOpen(prev => !prev);
-    const removeSidebar = () => document.getElementById("navList").style.display = "none";
 
     useEffect(() => {
         isOpen? document.getElementById("navList").style.display = "block" : document.getElementById("navList").style.display = "none";
-    }, [toggleSideBar, isOpen])
+    }, [toggleSideBar])
 
     
     useEffect(() => {
@@ -49,7 +48,7 @@ export default function Header(){
 
     return(
         <>
-    <div id="header" onClick={removeSidebar}>
+    <div id="header">
         <Image src="/images/jaunt-test-logo.png" alt="Logo" className="logo" width="50" height="50" />
             {/*<h1 className="headerName">JAUNT</h1>*/}
         
@@ -57,7 +56,7 @@ export default function Header(){
               &#9776;
         </button>
        
-        <ul id="navList">
+        <ul id="navList" onClick={toggleSideBar}>
             <Link href="/"><li className="navItem">Home</li></Link>
             <Link href="/blog"><li className="navItem">Blog</li></Link>
             <Link href="/#about"><li className="navItem">About Us</li></Link>
